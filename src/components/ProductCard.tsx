@@ -33,7 +33,9 @@ export function ProductCard({
       </div>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
-        <CardDescription>{formatCurrency(priceInCents)}</CardDescription>
+        <CardDescription>
+          {formatCurrency(Number(priceInCents) / 100)}
+        </CardDescription>
       </CardHeader>
 
       <CardContent className="flex-grow">
@@ -42,7 +44,7 @@ export function ProductCard({
 
       <CardFooter>
         <Button asChild size="lg" className="w-full">
-          <Link href={`/products/${id}/purchase`}></Link>
+          <Link href={`/products/${id}/purchase`}>Purchase</Link>
         </Button>
       </CardFooter>
     </Card>
@@ -62,7 +64,7 @@ export function ProductCardSkeleton() {
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex-grow">
+      <CardContent className="flex-grow space-y-1">
         <div className="h-4 w-full rounded-full bg-gray-300" />
         <div className="h-4 w-full rounded-full bg-gray-300" />
         <div className="h-4 w-3/4 rounded-full bg-gray-300" />
