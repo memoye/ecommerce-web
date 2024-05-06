@@ -76,6 +76,8 @@ function Form({
   const [email, setEmail] = useState<string>();
 
   async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+
     if (stripe == null || elements == null || email == null) return;
 
     setIsLoading(true);
