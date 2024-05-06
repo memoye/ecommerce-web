@@ -26,3 +26,4 @@ NEXT_PUBLIC_SERVER_URL=http://localhost:3000
 ```
 
 3. Run `npm run dev` to start the dev server
+4. Run `npm run email` to preview email templates
