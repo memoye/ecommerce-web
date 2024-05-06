@@ -69,7 +69,7 @@ async function createDownloadVerification(productId: string) {
     await db.downloadVerification.create({
       data: {
         productId,
-        expiresAt: new Date(Date.now() * 1000 * 60 * 60 * 24),
+        expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
       },
     })
   ).id;
